@@ -2,17 +2,31 @@ package com.aditya.cj.day4;
 
 public class NumberOperations {
     public static void main(String[] args) {
+        int num =98789;
+        int rev = reverse(num);
+        System.out.println(num+" reverse number is :"+rev);
+        if(isPalindrome(num)){
+            System.out.println(num+" is palindrome");
+        }else{
+            System.out.println(num+" is not a palindrome");
+        }
 
     }
 
     private static  int reverse(int num){
-        return 0;
+        int rev =0;
+        while (num !=0){
+            int r = num%10;
+            rev = rev*10+r;
+            num = num/10;
+        }
+        return rev;
     }
     private static int sumOfDigits(int num){
         return 0;
     }
     private static boolean isPalindrome(int num){
-        return false;
+        return reverse(num) == num;
     }
     private static boolean isArmstrong(int num){
         return false;
