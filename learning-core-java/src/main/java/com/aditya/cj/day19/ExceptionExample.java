@@ -15,6 +15,8 @@ public class ExceptionExample {
             System.out.println(String.format("%s / %s = %s",num1,num2,res));
         }catch (ArithmeticException e){
             System.out.println("Value num2 cannot be zero, exception message:"+e);
+        }catch (Exception e){ //always write the super class exception at the end
+            System.out.println(e.getMessage());
         }
         System.out.println("End of Main");
 
